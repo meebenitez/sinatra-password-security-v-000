@@ -11,7 +11,6 @@ describe 'user' do
 
   it 'has a name' do
     user = User.new
-    binding.pry
     user.username = "Steven"
     user.password = "safepassword"
     user.save
