@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
 
 	post "/signup" do
 		@user = User.new(username: params[:username], password: params[:password])
+		binding.pry
 		@user.save
 		session[:user_id] = @user.id
 		redirect '/success'
